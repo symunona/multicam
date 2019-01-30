@@ -16,9 +16,33 @@ on a large camera arrays.
 
 ## architecture
 
+### client
+
+Servers have to be switched on when switching the clients on.
+
+The clients are trying to connect to the server via the network interface provided in the setup. 
+
+On boot, they do the following:
+- get an IP by the server's DHCPD
+- mount a samba share on their boot
+- pull the latest code from the samba share that is the project's root
+- start the client.py script to listen to commands
+
+#### clieny.py
+
+    Responsible for all the functional part of the process.
+
+##### commands
+
+They can do the following things:
+
+- reboot: reboots the machine, restarting everything
+- options: setting camera options to the options provided
+- photo: takes a photo with the last provided settings
+- stream: starts broadcasting a camera stream to the network
+- identify: starts blinking the led with a recognizeable pattern
+
 
 ## installation
-
-
 
 ## calibration
