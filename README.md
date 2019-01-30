@@ -30,18 +30,28 @@ On boot, they do the following:
 
 #### clieny.py
 
-    Responsible for all the functional part of the process.
+Responsible for all the functional part of the process.
 
 ##### commands
 
 They can do the following things:
 
-- reboot: reboots the machine, restarting everything
-- options: setting camera options to the options provided
-- photo: takes a photo with the last provided settings
-- stream: starts broadcasting a camera stream to the network
-- identify: starts blinking the led with a recognizeable pattern
+- `reboot`: reboots the machine, restarting everything
+- `options`: setting camera options to the options provided
+- `photo`: takes a photo with the last provided settings
+- `stream`: starts broadcasting a camera stream to the network
+- `identify`: starts blinking the led with a recognizeable pattern
+- `ping`: responds with pong, if the script is running
 
+### server-cli.py
+
+`server-cli`: a command line interface to for reaching functions of the array
+
+##### commands
+
+`status`: prints generic system status to the 
+`send`: sends a command to a specific client
+`broadcast`/`yell`: sends a command to every client
 
 ## installation
 
