@@ -1,5 +1,5 @@
 # multicam
-A multi camera raspberry array system that creates an easily 
+A multi camera raspberry array system that creates an easily
 expandable architecture of cameras over multiple raspberry instances,
 allowing automations and multiple image processing.
 
@@ -20,7 +20,7 @@ on a large camera arrays.
 
 Servers have to be switched on when switching the clients on.
 
-The clients are trying to connect to the server via the network interface provided in the setup. 
+The clients are trying to connect to the server via the network interface provided in the setup.
 
 On boot, they do the following:
 - get an IP by the server's DHCPD
@@ -49,10 +49,12 @@ They can do the following things:
 
 ##### commands
 
-`status`: prints generic system status to the 
+`status`: prints generic system status to the
 `send`: sends a command to a specific client
 `broadcast`/`yell`: sends a command to every client
 
 ## installation
 
 ## calibration
+
+
