@@ -11,7 +11,7 @@ on a large camera arrays.
 ## prerequisites
 
 - you will need 1+ raspberries with cameras
-- a raspbian sketch light image from here: https://www.raspberrypi.org/downloads/raspbian/
+- a raspbian lite image from here: https://www.raspberrypi.org/downloads/raspbian/
 - time and motivation
 
 ## architecture
@@ -54,6 +54,35 @@ They can do the following things:
 `broadcast`/`yell`: sends a command to every client
 
 ## installation
+
+### from scratch
+
+#### both server & client
+- write the raspbian Lite onto an SD card
+- [Optional] Enable SSH on it
+- install git: 
+`sudo apt-get install git`
+`git clone https://github.com/symunona/multicam.git`
+`sudo crontab -e`
+
+Add line 
+ 
+Server `@reboot sudo python /home/pi/multicam/server/startup.py`
+Client: `@reboot sudo python /home/pi/multicam/client/startup.py`
+
+##### install samba
+
+
+`sudo nano /etc/apt/sources.list`
+
+Uncomment the non-free line
+
+`sudo apt-get update`
+
+[samba.md]
+
+#### server
+
 
 ## calibration
 
