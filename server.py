@@ -2,7 +2,7 @@
 
 # It should be started in with crontab.
 # crontab -e
-# @reboot sudo python /home/pi/multicam/server/startup.py
+# @reboot sudo python /home/pi/multicam/startup.py
 
 # Starts the server of the network server
 

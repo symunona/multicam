@@ -67,8 +67,8 @@ They can do the following things:
 
 Add line 
  
-Server `@reboot sudo python /home/pi/multicam/server/startup.py`
-Client: `@reboot sudo python /home/pi/multicam/client/startup.py`
+Server `@reboot sudo python /home/pi/multicam/server.py`
+Client: `@reboot sudo python /home/pi/multicam/client.py`
 
 ##### install samba
 
