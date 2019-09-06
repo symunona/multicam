@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # server/startup.py
 
 # It should be started in with crontab.

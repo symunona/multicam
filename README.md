@@ -60,18 +60,19 @@ They can do the following things:
 #### both server & client
 - write the raspbian Lite onto an SD card
 - [Optional] Enable SSH on it
-- install git: 
+- install git:
 `sudo apt-get install git`
 `git clone https://github.com/symunona/multicam.git`
 `sudo crontab -e`
 
-Add line 
- 
-Server `@reboot sudo python /home/pi/multicam/server.py`
-Client: `@reboot sudo python /home/pi/multicam/client.py`
+Add line
+
+Server `@reboot /home/pi/multicam/server.py`
+Client: `@reboot /home/pi/multicam/client.py`
 
 ##### install samba
 
+Before anything, you need to add samba to the sources rep.
 
 `sudo nano /etc/apt/sources.list`
 

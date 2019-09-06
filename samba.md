@@ -38,3 +38,16 @@ Clients have to automount the upload dir so that they can just easily save the i
 Download the necessary packages on the client.
 
 `sudo apt-get install samba samba-common-bin smbclient cifs-utils`
+
+Set up auto mount on bootup
+
+`nano /etc/fstab`
+
+Add this line:
+
+`//192.168.2.10/upload/ /home/pi/upload cifs guest,_netdev,uid=1000 0 0`
+
+Where `192.168.2.10` is the server raspberry's address, uuid=1000 is the user `pi`.
+
+Save it, test it, touch it, write it,
+fix it, mount it, quick reboot it.
