@@ -25,9 +25,9 @@ int main() {
     }
 
     // buttons: 17, 22, 23, 27
-    std::cout << "Buttons: 17, 22, 23, 27" << std::endl;
+    // std::cout << "Buttons: 17, 22, 23, 27" << std::endl;
     // 17: step left, 22: step right, 23: start/stop, 27: exit
-    std::cout << "Step left: 17, Step right: 22, Start/Stop: 23, Trigger: 27" << std::endl;
+    // std::cout << "Step left: 17, Step right: 22, Start/Stop: 23, Trigger: 27" << std::endl;
 
     // // Create 4 buttons
     GpioButton buttonLeft(BTN_A);
@@ -52,37 +52,50 @@ int main() {
 
     while (true) {
 
-        if (buttonLeft.pressed() == 1) {
-            cameraManager.cameraLeft();
-            std::cout << "Camera left" << std::endl;
-        } else if (buttonRight.pressed() == 1) {
-            cameraManager.cameraRight();
-            std::cout << "Camera right" << std::endl;
-        } else if (buttonStartStop.pressed() == 1) {
-            std::cout << "Start/Stop" << std::endl;
-            if (cameraManager.isLooping()) {
-                cameraManager.stopLooping();
-            } else {
-                cameraManager.startLooping();
-            }
-        } else if (buttonTrigger.pressed() == 1) {
-            std::cout << "Trigger" << std::endl;
-            cameraManager.shutter();
-        }
+        bool rightPressed = buttonRight.pressed();
+        bool leftPressed = buttonLeft.pressed();
+        bool buttonStartStopPressed = buttonStartStop.pressed();
+
         // Long press start stop left right should reorder cameras:
         // left should move current camera left, right should move current camera right
         // in the looping pattern.
         if (buttonStartStop.read()){
-
+            std::cout << "Start/Stop held" << std::endl;
+            if (rightPressed) {
+                std::cout << "Camera MOVED right" << std::endl;
+                cameraManager.moveRight();
+            } else if (leftPressed) {
+                cameraManager.moveLeft();
+                std::cout << "Camera MOVED left" << std::endl;
+            }
+        } else {
+            if (leftPressed) {
+                cameraManager.cameraLeft();
+                std::cout << "Camera left" << std::endl;
+            } else if (rightPressed) {
+                cameraManager.cameraRight();
+                std::cout << "Camera right" << std::endl;
+            } else if (buttonStartStopPressed) {
+                std::cout << "Start/Stop" << std::endl;
+                if (cameraManager.isLooping()) {
+                    cameraManager.stopLooping();
+                } else {
+                    cameraManager.startLooping();
+                }
+            } else if (buttonTrigger.pressed()) {
+                std::cout << "Trigger" << std::endl;
+                cameraManager.shutter();
+            }
         }
 
 
         cameraManager.gameLoop();
 
-        int currentCameraIndex = cameraManager.getActiveCamera();
+        int currentIndex = cameraManager.getActiveCamera();
+        int currentCameraIndex = cameraManager.getMappedCameraIndex();
         cv::Mat frame;
         cameraInterface.readFrame(currentCameraIndex, frame);
-        fbDisplay.displayFrame(frame, currentCameraIndex, cameraInterface.cameraCount());
+        fbDisplay.displayFrame(frame, currentIndex, cameraInterface.cameraCount());
     }
 
     return 0;

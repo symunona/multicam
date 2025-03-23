@@ -14,6 +14,8 @@ public:
     CameraInterface(std::pair<int, int> res);
     int cameraCount() const;
     void readFrame(int cameraIndex, cv::Mat &frame);
+    void resetAllCameras();
+    ~CameraInterface();
 };
 
 #endif // CAMERA_INTERFACE_HPP

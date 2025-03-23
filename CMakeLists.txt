@@ -11,6 +11,13 @@ find_package(OpenCV REQUIRED)
 # Include directories
 include_directories(${OpenCV_INCLUDE_DIRS})
 
+# Find libudev using pkg-config
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(LIBUDEV REQUIRED libudev)
+
+include_directories(${LIBUDEV_INCLUDE_DIRS})
+link_directories(${LIBUDEV_LIBRARY_DIRS})
+
 # Source files
 set(SOURCES
     main.cpp
@@ -23,5 +30,9 @@ set(SOURCES
 # Add executable
 add_executable(camera ${SOURCES})
 
-# Link OpenCV libraries
-target_link_libraries(camera ${OpenCV_LIBS} wiringPi)
+# Link libraries
+target_link_libraries(camera
+    ${OpenCV_LIBS}
+    wiringPi
+    ${LIBUDEV_LIBRARIES}
+)
