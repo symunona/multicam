@@ -39,3 +39,25 @@ wget latest release, then
 ```bash
 sudo apt install ./wiringpi-3.0-1.deb
 ```
+
+# Cross compilation from a standard linux system
+
+0. Make sure that the raspberry CAN compile the camera.
+
+1. Run `docker build -f Dockerfile.rpi -t rpi-cross .`
+
+2. Run `.cross-compile-setup.sh` on your machine to copy over the files from your raspberry pi to your build machine.
+
+3. Run `docker run --rm -it   -v "$(pwd)":/project   -w /project   rpi-cross`
+
+4. You should get a terminal, then you can navigate to the build folder
+
+`mkdir build && cd build`
+
+5. run `cmake ..` then run `make`
+
+6. finally scp it up with `scp camera rpi:/home/pi/camera`
+
+7. log in to your raspberry, then run `./camera`
+
+
