@@ -38,3 +38,13 @@ bool GpioButton::pressed() {
 
     return false;
 }
+
+bool GpioButton::isLongPressed() {
+    auto now = steady_clock::now();
+    auto elapsed = duration_cast<milliseconds>(now - lastDebounceTime);
+
+    if (elapsed.count() > 500) {
+        return true;
+    }
+    return false;
+}

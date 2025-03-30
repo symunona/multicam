@@ -54,7 +54,7 @@ int main() {
 
         bool rightPressed = buttonRight.pressed();
         bool leftPressed = buttonLeft.pressed();
-        bool buttonStartStopPressed = buttonStartStop.pressed();
+        bool buttonStartStopPressed = buttonStartStop.isLongPressed();
 
         // Long press start stop left right should reorder cameras:
         // left should move current camera left, right should move current camera right
@@ -68,6 +68,14 @@ int main() {
                 cameraManager.moveLeft();
                 std::cout << "Camera MOVED left" << std::endl;
             }
+            if (! leftPressed && ! rightPressed && buttonStartStopPressed) {
+                std::cout << "Start/Stop" << std::endl;
+                if (cameraManager.isLooping()) {
+                    cameraManager.stopLooping();
+                } else {
+                    cameraManager.startLooping();
+                }
+            }
         } else {
             if (leftPressed) {
                 cameraManager.cameraLeft();
@@ -75,16 +83,10 @@ int main() {
             } else if (rightPressed) {
                 cameraManager.cameraRight();
                 std::cout << "Camera right" << std::endl;
-            } else if (buttonStartStopPressed) {
-                std::cout << "Start/Stop" << std::endl;
-                if (cameraManager.isLooping()) {
-                    cameraManager.stopLooping();
-                } else {
-                    cameraManager.startLooping();
-                }
             } else if (buttonTrigger.pressed()) {
                 std::cout << "Trigger" << std::endl;
                 cameraManager.shutter();
+                return 0;
             }
         }
 
@@ -93,9 +95,19 @@ int main() {
 
         int currentIndex = cameraManager.getActiveCamera();
         int currentCameraIndex = cameraManager.getMappedCameraIndex();
-        cv::Mat frame;
-        cameraInterface.readFrame(currentCameraIndex, frame);
-        fbDisplay.displayFrame(frame, currentIndex, cameraInterface.cameraCount());
+        cv::Mat frames[4];
+
+        int startTime = cv::getTickCount();
+        // Read all camera frames, so they have up-to-date data
+        for (int i = 0; i < cameraInterface.cameraCount(); ++i) {
+            cameraInterface.readFrame(i, frames[i]);
+        }
+        int endTime = cv::getTickCount();
+        double elapsedTime = (endTime - startTime) / cv::getTickFrequency();
+        std::cout << "\rFPS: " << 1.0 / elapsedTime << "   " << std::flush;
+
+        // cameraInterface.readFrame(currentCameraIndex, frame);
+        fbDisplay.displayFrame(frames[currentCameraIndex], currentIndex, cameraInterface.cameraCount());
     }
 
     return 0;

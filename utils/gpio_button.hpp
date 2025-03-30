@@ -15,6 +15,8 @@ public:
     // Returns true if button is pressed (with debounce)
     bool pressed();
 
+    bool isLongPressed();
+
 private:
     int pin;
     bool lastStableState;

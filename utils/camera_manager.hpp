@@ -4,8 +4,10 @@
 #include <chrono>
 #include <vector>
 
+#define CAMERA_SWITCH_INTERVAL 200 // milliseconds
+
 enum class Direction {
-    Left,
+    Left,   
     Right
 };
 
@@ -37,7 +39,7 @@ class CameraManager {
         int totalCameras;
         Direction direction;
         std::chrono::steady_clock::time_point lastSwitchTime;
-        const std::chrono::milliseconds stepInterval{400};
+        const std::chrono::milliseconds stepInterval{CAMERA_SWITCH_INTERVAL};
 
         std::vector<int> cameraDeviceOrder;
 
