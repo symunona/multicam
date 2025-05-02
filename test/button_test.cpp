@@ -10,6 +10,9 @@ const int BTN_B = 3;  // GPIO22
 const int BTN_C = 4;  // GPIO23
 const int BTN_D = 2;  // GPIO27
 
+const int BTN_SHUTTER = 26;  // GPIO12
+
+
 int main() {
     wiringPiSetup();  // Use wiringPi numbering
 
@@ -18,6 +21,7 @@ int main() {
     pinMode(BTN_B, INPUT); pullUpDnControl(BTN_B, PUD_UP);
     pinMode(BTN_C, INPUT); pullUpDnControl(BTN_C, PUD_UP);
     pinMode(BTN_D, INPUT); pullUpDnControl(BTN_D, PUD_UP);
+    pinMode(BTN_SHUTTER, INPUT); pullUpDnControl(BTN_SHUTTER, PUD_UP);
 
     cout << "Press buttons (CTRL+C to stop)" << endl;
 
@@ -26,6 +30,7 @@ int main() {
         if (digitalRead(BTN_B) == LOW) cout << "Button B pressed" << endl;
         if (digitalRead(BTN_C) == LOW) cout << "Button C pressed" << endl;
         if (digitalRead(BTN_D) == LOW) cout << "Button D pressed" << endl;
+        if (digitalRead(BTN_SHUTTER) == LOW) cout << "Button SHUTTER pressed" << endl;
 
         usleep(100000); // sleep 100ms
     }
