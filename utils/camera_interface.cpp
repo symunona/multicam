@@ -30,8 +30,8 @@ CameraInterface::CameraInterface(std::pair<int, int> res) : resolution(res) {
         }
 
         caps.back().set(cv::CAP_PROP_FOURCC, cv::VideoWriter::fourcc('M', 'J', 'P', 'G'));
-        caps.back().set(cv::CAP_PROP_FRAME_WIDTH, resolution.first);
-        caps.back().set(cv::CAP_PROP_FRAME_HEIGHT, resolution.second);
+        caps.back().set(cv::CAP_PROP_FRAME_WIDTH, resolution.first * 2 );
+        caps.back().set(cv::CAP_PROP_FRAME_HEIGHT, resolution.second * 2);
         caps.back().set(cv::CAP_PROP_FPS, 4);
         caps.back().set(cv::CAP_PROP_BUFFERSIZE, 3);
     }

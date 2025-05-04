@@ -40,6 +40,10 @@ wget latest release, then
 sudo apt install ./wiringpi-3.0-1.deb
 ```
 
+ImageMagick to generate gifs:
+
+```sudo apt install imagemagick`
+
 # Cross compilation from a standard linux system
 
 0. Make sure that the raspberry CAN compile the camera.

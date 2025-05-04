@@ -1,0 +1,297 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/arm-linux-gnueabihf-gcc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/usr/lib/gcc-cross/arm-linux-gnueabihf/11/../../../../arm-linux-gnueabihf/bin/ld: final link failed: Operation not supported
+collect2: error: ld returned 1 exit status
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/arm-linux-gnueabihf-gcc 
+Build flags: 
+Id flags: -c 
+
+The output was:
+1
+/tmp/cc8e662v.s: Assembler messages:
+/tmp/cc8e662v.s: Fatal error: CMakeCCompilerId.o: Operation not supported
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/arm-linux-gnueabihf-gcc 
+Build flags: 
+Id flags: -Aa 
+
+The output was:
+1
+<command-line>: error: missing '(' after predicate
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/arm-linux-gnueabihf-gcc 
+Build flags: 
+Id flags: -D__CLASSIC_C__ 
+
+The output was:
+1
+/usr/lib/gcc-cross/arm-linux-gnueabihf/11/../../../../arm-linux-gnueabihf/bin/ld: final link failed: Operation not supported
+collect2: error: ld returned 1 exit status
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/arm-linux-gnueabihf-gcc 
+Build flags: 
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+1
+arm-linux-gnueabihf-gcc: error: unrecognized command-line option ‘--target=arm-arm-none-eabi’
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/arm-linux-gnueabihf-gcc 
+Build flags: 
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+1
+/tmp/ccf62eKN.s: Assembler messages:
+/tmp/ccf62eKN.s: Fatal error: CMakeCCompilerId.o: Operation not supported
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/arm-linux-gnueabihf-gcc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/usr/lib/gcc-cross/arm-linux-gnueabihf/11/../../../../arm-linux-gnueabihf/bin/ld: final link failed: Operation not supported
+collect2: error: ld returned 1 exit status
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/arm-linux-gnueabihf-gcc 
+Build flags: 
+Id flags: -c 
+
+The output was:
+1
+/tmp/ccwv87hC.s: Assembler messages:
+/tmp/ccwv87hC.s: Fatal error: CMakeCCompilerId.o: Operation not supported
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/arm-linux-gnueabihf-gcc 
+Build flags: 
+Id flags: -Aa 
+
+The output was:
+1
+<command-line>: error: missing '(' after predicate
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/arm-linux-gnueabihf-gcc 
+Build flags: 
+Id flags: -D__CLASSIC_C__ 
+
+The output was:
+1
+/usr/lib/gcc-cross/arm-linux-gnueabihf/11/../../../../arm-linux-gnueabihf/bin/ld: final link failed: Operation not supported
+collect2: error: ld returned 1 exit status
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/arm-linux-gnueabihf-gcc 
+Build flags: 
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+1
+arm-linux-gnueabihf-gcc: error: unrecognized command-line option ‘--target=arm-arm-none-eabi’
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/arm-linux-gnueabihf-gcc 
+Build flags: 
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+1
+/tmp/cce1X8Xm.s: Assembler messages:
+/tmp/cce1X8Xm.s: Fatal error: CMakeCCompilerId.o: Operation not supported
+
+
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+arm-linux-gnueabihf-gcc: fatal error: no input files
+compilation terminated.
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+arm-linux-gnueabihf-gcc: fatal error: no input files
+compilation terminated.
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/arm-linux-gnueabihf-g++ 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/usr/lib/gcc-cross/arm-linux-gnueabihf/11/../../../../arm-linux-gnueabihf/bin/ld: final link failed: Operation not supported
+collect2: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/arm-linux-gnueabihf-g++ 
+Build flags: 
+Id flags: -c 
+
+The output was:
+1
+/tmp/ccnitqQ4.s: Assembler messages:
+/tmp/ccnitqQ4.s: Fatal error: CMakeCXXCompilerId.o: Operation not supported
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/arm-linux-gnueabihf-g++ 
+Build flags: 
+Id flags: --c++ 
+
+The output was:
+1
+arm-linux-gnueabihf-g++: error: unrecognized command-line option ‘--c++’
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/arm-linux-gnueabihf-g++ 
+Build flags: 
+Id flags: --ec++ 
+
+The output was:
+1
+arm-linux-gnueabihf-g++: error: unrecognized command-line option ‘--ec++’; did you mean ‘-Weffc++’?
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/arm-linux-gnueabihf-g++ 
+Build flags: 
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+1
+arm-linux-gnueabihf-g++: error: unrecognized command-line option ‘--target=arm-arm-none-eabi’
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/arm-linux-gnueabihf-g++ 
+Build flags: 
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+1
+/tmp/cccFJK0d.s: Assembler messages:
+/tmp/cccFJK0d.s: Fatal error: CMakeCXXCompilerId.o: Operation not supported
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/arm-linux-gnueabihf-g++ 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+/usr/lib/gcc-cross/arm-linux-gnueabihf/11/../../../../arm-linux-gnueabihf/bin/ld: final link failed: Operation not supported
+collect2: error: ld returned 1 exit status
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/arm-linux-gnueabihf-g++ 
+Build flags: 
+Id flags: -c 
+
+The output was:
+1
+/tmp/ccTECEdv.s: Assembler messages:
+/tmp/ccTECEdv.s: Fatal error: CMakeCXXCompilerId.o: Operation not supported
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/arm-linux-gnueabihf-g++ 
+Build flags: 
+Id flags: --c++ 
+
+The output was:
+1
+arm-linux-gnueabihf-g++: error: unrecognized command-line option ‘--c++’
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/arm-linux-gnueabihf-g++ 
+Build flags: 
+Id flags: --ec++ 
+
+The output was:
+1
+arm-linux-gnueabihf-g++: error: unrecognized command-line option ‘--ec++’; did you mean ‘-Weffc++’?
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/arm-linux-gnueabihf-g++ 
+Build flags: 
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+1
+arm-linux-gnueabihf-g++: error: unrecognized command-line option ‘--target=arm-arm-none-eabi’
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/arm-linux-gnueabihf-g++ 
+Build flags: 
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+1
+/tmp/ccRwhRKV.s: Assembler messages:
+/tmp/ccRwhRKV.s: Fatal error: CMakeCXXCompilerId.o: Operation not supported
+
+
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+arm-linux-gnueabihf-g++: fatal error: no input files
+compilation terminated.
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+arm-linux-gnueabihf-g++: fatal error: no input files
+compilation terminated.
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: /run/user/1000/gvfs/sftp:host=q2/home/pi/multicam3d/build-arm/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_fdd8e/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_fdd8e.dir/build.make CMakeFiles/cmTC_fdd8e.dir/build
+gmake[1]: Entering directory '/run/user/1000/gvfs/sftp:host=q2/home/pi/multicam3d/build-arm/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fdd8e.dir/CMakeCCompilerABI.c.o
+/usr/bin/arm-linux-gnueabihf-gcc    -o CMakeFiles/cmTC_fdd8e.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.22/Modules/CMakeCCompilerABI.c
+/tmp/ccR1PekH.s: Assembler messages:
+/tmp/ccR1PekH.s: Fatal error: CMakeFiles/cmTC_fdd8e.dir/CMakeCCompilerABI.c.o: Operation not supported
+gmake[1]: *** [CMakeFiles/cmTC_fdd8e.dir/build.make:78: CMakeFiles/cmTC_fdd8e.dir/CMakeCCompilerABI.c.o] Error 1
+gmake[1]: Leaving directory '/run/user/1000/gvfs/sftp:host=q2/home/pi/multicam3d/build-arm/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_fdd8e/fast] Error 2
+
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /run/user/1000/gvfs/sftp:host=q2/home/pi/multicam3d/build-arm/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_5bbef/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_5bbef.dir/build.make CMakeFiles/cmTC_5bbef.dir/build
+gmake[1]: Entering directory '/run/user/1000/gvfs/sftp:host=q2/home/pi/multicam3d/build-arm/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5bbef.dir/testCCompiler.c.o
+/usr/bin/arm-linux-gnueabihf-gcc    -o CMakeFiles/cmTC_5bbef.dir/testCCompiler.c.o -c /run/user/1000/gvfs/sftp:host=q2/home/pi/multicam3d/build-arm/CMakeFiles/CMakeTmp/testCCompiler.c
+/tmp/ccyePnvi.s: Assembler messages:
+/tmp/ccyePnvi.s: Fatal error: CMakeFiles/cmTC_5bbef.dir/testCCompiler.c.o: Operation not supported
+gmake[1]: *** [CMakeFiles/cmTC_5bbef.dir/build.make:78: CMakeFiles/cmTC_5bbef.dir/testCCompiler.c.o] Error 1
+gmake[1]: Leaving directory '/run/user/1000/gvfs/sftp:host=q2/home/pi/multicam3d/build-arm/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_5bbef/fast] Error 2
+
+
+
