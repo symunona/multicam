@@ -23,6 +23,7 @@ const int BTN_SHUTTER = 26;  // GPIO12
 const std::string rawDir = "camera-raw";
 const std::string gifDir = "camera-gif";
 
+cv::Mat frames[4];
 
 int initializeAndGetNextIndex() {
     namespace fs = std::filesystem;
@@ -194,10 +195,10 @@ int main() {
 
             int startTime = cv::getTickCount();
 
-            saveFramesToRawFolder(cameraInterface.frames, cameraInterface.cameraCount(), pictureIndex++);
+            saveFramesToRawFolder(frames, cameraInterface.cameraCount(), pictureIndex++);
             std::ostringstream gifFilename;
             gifFilename << "MC-" << std::setw(5) << std::setfill('0') << pictureIndex << ".gif";
-            createLoopingGif(gifFilename.str(), cameraInterface.frames, cameraInterface.cameraCount(), 200);
+            createLoopingGif(gifFilename.str(), frames, cameraInterface.cameraCount(), 200);
 
             int endTime = cv::getTickCount();
             double elapsedTime = (endTime - startTime) / cv::getTickFrequency();
@@ -209,7 +210,6 @@ int main() {
 
         int currentIndex = cameraManager.getActiveCamera();
         int currentCameraIndex = cameraManager.getMappedCameraIndex();
-        cv::Mat frames[4];
 
         int startTime = cv::getTickCount();
         // Read all camera frames, so they have up-to-date data

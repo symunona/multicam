@@ -1,0 +1,21 @@
+#!/bin/bash
+
+CAMERA_SSH=pi@q2
+
+# Build the camera binary
+# docker run --rm -it \
+#   -v "$(pwd)":/project \
+#   -w /project/build \
+#   rpi-cross \
+#   /usr/bin/bash -c "
+#     mkdir -p build && cd build && \
+#     cmake .. -DCMAKE_TOOLCHAIN_FILE=../pi-toolchain.cmake \
+#              -DOpenCV_DIR=/project/.rpi-sysroot/usr/lib/aarch64-linux-gnu/cmake/opencv4 && \
+#     make -j\$(nproc)
+#   "
+
+
+scp -r build/camera $CAMERA_SSH:/home/pi/multicam3d/build/
+
+ssh $CAMERA_SSH "killall camera & cd /home/pi/multicam3d/build && ./camera &"
+
